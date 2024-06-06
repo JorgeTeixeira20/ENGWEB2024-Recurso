@@ -35,8 +35,9 @@ npx express-generator --view=pug ex2
 
 Criei os pugs para cada autor e para cada livro.
 
-A associação entre idAutor e o autor é feita através de um filtro que verifica se o idAutor está incluído na lista de autores de cada livro.
-No caso foi esta a linha usada:
+A associação entre idAutor e o autor é feita através de um filtro que verifica se o idAutor (que no caso é o próprio nome do autor) está incluído na lista de autores de cada livro.
+Desta forma:
+
 ```bash
 const books = response.data.filter(book => book.author.includes(author));
 ```
