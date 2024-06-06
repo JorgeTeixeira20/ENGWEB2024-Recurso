@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      context: ./ex1
+      dockerfile: Dockerfile
+    ports:
+      - "17077:17077"
+    depends_on:
+      - mongodb 
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    depends_on:
+      - mongo-seed
+
+  mongo-seed:
+    image: mongo:latest
+    volumes:
+      - ./dataset.json:/datasets/dataset.json
+    command: mongoimport --host mongodb -d livros -c livros --type json --file /datasets/dataset.json --jsonArray
