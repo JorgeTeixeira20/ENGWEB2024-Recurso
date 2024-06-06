@@ -29,7 +29,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books', livrosRouter);
 
-const PORT = process.env.PORT || 17002;
+const PORT = process.env.PORT || 17000;
 app.listen(PORT, () => {
   console.log(`Servidor está rodando na porta ${PORT}`);
 });

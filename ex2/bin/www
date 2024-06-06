@@ -5,14 +5,14 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('livros:server');
+var debug = require('debug')('ex2:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '17000');
+var port = normalizePort(process.env.PORT || '17001');
 app.set('port', port);
 
 /**

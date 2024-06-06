@@ -1,4 +1,3 @@
-# Usar a imagem base do Node.js
 FROM node:22.1.0-alpine
 
 # Definir o diretório de trabalho
@@ -11,7 +10,7 @@ COPY . .
 RUN npm install
 
 # Expor a porta
-EXPOSE 17000
+EXPOSE 17001
 
 # Comando para iniciar o servidor
 CMD ["npm", "start"]

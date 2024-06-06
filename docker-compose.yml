@@ -4,9 +4,17 @@ services:
       context: ./ex1
       dockerfile: Dockerfile
     ports:
-      - "17077:17077"
+      - "17000:17000"
     depends_on:
-      - mongodb 
+      - mongodb
+  frontend:
+    build:
+      context: ./ex2
+      dockerfile: Dockerfile
+    ports:
+      - "17001:17001"
+    depends_on:
+      - backend     
   mongodb:
     image: mongo:latest
     ports:

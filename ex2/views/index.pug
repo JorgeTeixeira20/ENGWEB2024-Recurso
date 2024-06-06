@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  body
+    .container
+      h1 Lista de Livros
+      table.table.table-striped
+        thead
+          tr
+            th ID
+            th Título
+            th Autor
+            th Data de Publicação
+            th Páginas
+        tbody
+          each book in books
+            tr
+              td: a(href=`/${book._id}`) #{book._id}
+              td #{book.title}
+              td: a(href=`/authors/${book.author[0]}`) #{book.author[0]}
+              td #{book.publishDate}
+              td #{book.pages}

@@ -1,0 +1,86 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  body
+    .container
+      h1 Detalhes do Livro
+      if book.coverImg
+        img(src=book.coverImg, alt=book.title, class='img-thumbnail')
+      table.table.table-bordered
+        tr
+          th ID
+          td #{book._id}
+        tr
+          th Título
+          td #{book.title}
+        tr
+          th Série
+          td #{book.series}
+        tr
+          th Autor
+          td #{book.author}
+        tr
+          th Avaliação
+          td #{book.rating}
+        tr
+          th Descrição
+          td #{book.description}
+        tr
+          th Idioma
+          td #{book.language}
+        tr
+          th ISBN
+          td #{book.isbn}
+        tr
+          th Gêneros
+          td #{book.genres}
+        tr
+          th Personagens
+          td #{book.characters}
+        tr
+          th Formato
+          td #{book.bookFormat}
+        tr
+          th Edição
+          td #{book.edition}
+        tr
+          th Páginas
+          td #{book.pages}
+        tr
+          th Editora
+          td #{book.publisher}
+        tr
+          th Data de Publicação
+          td #{book.publishDate}
+        tr
+          th Primeira Data de Publicação
+          td #{book.firstPublishDate}
+        tr
+          th Prêmios
+          td #{book.awards}
+        tr
+          th Número de Avaliações
+          td #{book.numRatings}
+        tr
+          th Avaliações por Estrelas
+          td #{book.ratingsByStars}
+        tr
+          th Percentual de Gostos
+          td #{book.likedPercent}
+        tr
+          th Ambientação
+          td #{book.setting}
+        tr
+          th BBE Score
+          td #{book.bbeScore}
+        tr
+          th BBE Votes
+          td #{book.bbeVotes}
+        tr
+          th Preço
+          td #{book.price}
+      a(href='/') Voltar à página principal

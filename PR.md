@@ -25,6 +25,22 @@ npx express-generator --no-view ex1
 O que fez gerar automaticamente todas as pastas necessárias.
 Adicionei também a pasta Controllers e Models aonde (juntamente com a pasta Routes) foi adicionado o ficheiro livros.js. Estes 3 ficheiros (de nome igual) serviram para estabelecer a lógica da API
 
+## Ex2
+
+Para o segundo exercicio gerei as pastas com um código semelhante ao anteriror
+
+```bash
+npx express-generator --view=pug ex2
+```
+
+Criei os pugs para cada autor e para cada livro.
+
+A associação entre idAutor e o autor é feita através de um filtro que verifica se o idAutor está incluído na lista de autores de cada livro.
+No caso foi esta a linha usada:
+```bash
+const books = response.data.filter(book => book.author.includes(author));
+```
+
 # Aplicação completa
 
 Para rodar a aplicação basta correr o comando:
