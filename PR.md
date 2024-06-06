@@ -49,3 +49,9 @@ Para rodar a aplicação basta correr o comando:
 ```bash
 docker compose up --build -d
 ```
+
+
+### Nota
+Verifiquei em última instancia que a porta 17000 está ocupada no meu computador, não consigo descobrir que processo está a ser utilizado na mesma
+Troquei a porta do backend para 17077 e todo o programa funcionou. (Isto é, trocando a porta no ficheiro www, no docker-compose e dockerfile do exercicio1 e no ficheiro routes/index.js do exercicio2 )
+Tentei utilizar o comando `sudo lsof -i :17000` mas nenhum processo aparece no ecrã
